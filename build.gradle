@@ -75,7 +75,7 @@ minecraft {
     version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "eclipse"
 	// 最新的 MCP 版本是 stable_12 的 稳定版
-	mappings = "stable_12"
+	// mappings = "stable_12"
 	
 }
 
