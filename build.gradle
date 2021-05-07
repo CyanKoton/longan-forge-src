@@ -1,23 +1,37 @@
+
+// MOD 开发 基础 教程
+
+// 构建脚本
 buildscript {
+
+	//你可以看看几个国内存储库，我们国内开发环境下载速度最快还行
+	// 存储库
     repositories {
+		// 那是做叫 中央存储库， 绝大多数具备 Gradle项目 都离不开 mavenCentral（中央存储库）
         mavenCentral()
+		// 借用 阿里云 存储库，那是国内存储库, central 仓库 和 jcenter 仓库 合并的
 		maven {
-			 name = "aliyun"
-			url 'https://maven.aliyun.com/repository/public/'
+			name = "aliyun"
+			url "https://maven.aliyun.com/repository/public/"
 		}
+		// 龙眼 存储库，那是国内存储库，作者：beanflame（豆焰）电邮：beanflame@qq.com
 		maven {
             name = "longan"
             url = "https://longan.beanflame.cn/maven"
         }
+		// FORGE 存储库
         maven {
             name = "forge"
-            url = "http://files.minecraftforge.net/maven"
+            url = "https://files.minecraftforge.net/maven"
         }
+		// sonatype 存储库 Sonatype公司出资维护的，我们把它想象成是一个无比巨大，物产丰富的大库.....
         maven {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
     }
+	
+	// 依赖库
     dependencies {
         classpath ('cn.beanflame.forge:LonganForgeGradle:1.2-1.1.0') {
             changing = true
@@ -25,51 +39,162 @@ buildscript {
     }
 }
 
+
+//---------------------------------------------------------------------------------------------
+//如果下面没用，就是可以去掉了
+
+
+// 插件
+plugins {
+    id 'java-library'	// JAVA 依赖库
+    id 'maven-publish'	// 上传 maven 存储库 功能
+}
+
+
+//---------------------------------------------------------------------------------------------
+
+
+// JAVA 版本
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+// 加载 LonganForgeGradle 插件，那是 forge 有用的呢
 apply plugin: 'forge'
 
+
+// MOD 版本信息 , 别忘写版本信息
 version = "1.0"
-group= "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group= "com.yourname.modid"
 archivesBaseName = "modid"
 
+
+// minecraft（我的世界） Forge 版本、 MCP 版本
 minecraft {
+	
     version = "1.7.10-10.13.4.1614-1.7.10"
     runDir = "eclipse"
-	// 最新的 MCP 版本是 stable_12
+	// 最新的 MCP 版本是 stable_12 的 稳定版
 	mappings = "stable_12"
+	
 }
 
+
+// 依赖库
 dependencies {
-    // you may put jars on which you depend on in ./libs
-    // or you may define them like so..
+
+	// 你可以把你的 本地 MOD 或 本地依赖 放到 libs 文件夹里，	./libs
+	// 或者你可以用存储库的网络下载依赖...
+	
+	
+	// 将 artifact 、classifier （第三方依赖库） 添加放到 开发环境 里
+	// 示例：
     //compile "some.group:artifact:version:classifier"
     //compile "some.group:artifact:version"
-      
-    // real examples
-    //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'  // adds buildcraft to the dev env
-    //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' // adds ejml to the dev env
-
-    // for more info...
+	
+	
+	// 将 buildcraft（建筑工艺 MOD） 添加放到 开发环境 里
+	// 示例：
+    //compile 'com.mod-buildcraft:buildcraft:6.0.8:dev'
+	
+	
+	// 将 ejml（工业2 MOD 前置） 添加放到 开发环境 里
+	// 示例：
+    //compile 'com.googlecode.efficient-java-matrix-library:ejml:0.24' 
+	
+	
+    // 有什么关详细更多信息...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
+	
 }
 
-processResources
-{
-    // this will ensure that this task is redone when the versions change.
+
+// 添加资源
+processResources {
+
+	// 这将确保在版本更改时重新执行此任务
     inputs.property "version", project.version
     inputs.property "mcversion", project.minecraft.version
-
-    // replace stuff in mcmod.info, nothing else
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-                
-        // replace version and mcversion
+	
+    // 仅替换 mcmod.info 中的值
+    filesMatching('mcmod.info') {
+		// 替换更新 version 和 mcversion
         expand 'version':project.version, 'mcversion':project.minecraft.version
     }
-        
-    // copy everything else, thats not the mcmod.info
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
+	
+}
+
+
+// 确保源文件的编码设置为UTF-8， 
+// 有什么关详细更多信息
+// http://yodaconditions.net/blog/fix-for-java-file-encoding-problems-with-gradle.html
+tasks.withType(JavaCompile) {
+	
+    options.encoding = "UTF-8"
+	
+}
+
+
+//---------------------------------------------------------------------------------------------
+//如果下面没用，就是可以去掉了
+
+// 要认真发布MOD~~！
+
+
+
+
+
+
+// 这将此任务创建一个.jar文件，其中包含此 MOD 的源代码
+task sourcesJar(type: Jar, dependsOn: classes) {
+    classifier = "sources"
+    from sourceSets.main.allSource
+}
+
+
+// 这将此任务将创建一个.jar文件，其中包含此mod的已取消订阅版本，供其他开发人员在开发环境中使用。
+task devJar(type: Jar) {
+    classifier = "dev"
+    from sourceSets.main.output
+}
+
+
+// 在构建 MOD 时候，创建列出的工件
+artifacts {
+    archives sourcesJar
+    archives devJar
+}
+
+
+// 这将此块配置要生成的任何 maven 存储库 发布
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+			// 在这里添加您要发布 MOD 的任何其他工件！
+            artifact(jar) {
+                builtBy build
+            }
+            artifact(sourcesJar) {
+                builtBy sourcesJar
+            }
+            artifact(devJar) {
+                builtBy devJar
+            }
+        }
+    }
+	
+    // 这将此块选择要发布 MOD 添加放到 maven 存储库。
+    repositories {
+        // 这将在此处添加要发布 MOD 添加放到 maven 存储库
     }
 }
+
+
+
+
+
+
+
+
+//---------------------------------------------------------------------------------------------
