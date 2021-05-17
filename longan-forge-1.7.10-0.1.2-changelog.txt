@@ -1,4 +1,26 @@
 Changelog:
+//longan-forge-src-changelog.txt:
+longan-forge-1.7.10-changelog.txt:
+
+Build 0.1.2:
+	设置MC简体中文语言
+	ExampleMod.java 添加中文注释
+	
+Build 0.1.1:
+	支持 Gradle 7.0
+	build.gradle 改写中文注释
+	
+Build 0.1.1:
+	build.gradle 添加中文注释方便
+	使用 Gradle 7.0
+	使用 Minecraft-1.7.10
+	使用 Forge-10.13.4.1614
+	使用 LonganForgeGradle-1.2-1.1.0
+	
+//---------------------------------------------	
+
+forge-1.7.10-10.13.4.1614-1.7.10-changelog.txt:
+
 Build 1614:
 	LexManos: Fix dispensers equipping armor on players in the wrong slot Closes #1649
 
