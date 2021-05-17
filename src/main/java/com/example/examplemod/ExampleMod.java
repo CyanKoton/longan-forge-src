@@ -12,7 +12,7 @@ public class ExampleMod {
     
     @EventHandler
     public void init(FMLInitializationEvent event) {
-	// 一些示例代码 DIRT BLOCK（泥土）
+	// 一些示例代码 DIRT BLOCK （泥土）
         System.out.println("泥土 >> " + Blocks.dirt.getUnlocalizedName());
     }
 }
