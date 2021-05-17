@@ -19,13 +19,13 @@ public class ExampleMod {
     @Instance(ExampleMod.MODID)
     public static ExampleMod instance;
 
-    // FML预初始化事件
+    // FMLPreInitializationEvent（FML预初始化事件）
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         System.out.println("hello 1");
     }
 
-    // FML初始化事件
+    // FMLInitializationEvent（FML初始化事件）
     @EventHandler
     public void init(FMLInitializationEvent event) {
         // 一些示例代码 DIRT BLOCK（泥土）
@@ -33,7 +33,7 @@ public class ExampleMod {
         System.out.println("泥土 >> " + Blocks.dirt.getUnlocalizedName());
     }
 
-    // FML初始化后事件
+    // FMLPostInitializationEvent（FML初始化后事件）
     @EventHandler
     public void postInit(FMLPostInitializationEvent event) {
         System.out.println("hello 3");
