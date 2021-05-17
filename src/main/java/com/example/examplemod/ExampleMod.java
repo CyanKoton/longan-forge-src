@@ -10,19 +10,21 @@ import net.minecraft.init.Blocks;
 
 @Mod(modid = ExampleMod.MODID, version = ExampleMod.VERSION)
 public class ExampleMod {
-    
+
+    // MODID 标识符，请用英文个MODID，可以使用 小写 或 小写加下划线，比如examplemod、example_mod
     public static final String MODID = "examplemod";
+    // MOD 版本号
     public static final String VERSION = "1.0";
-    
+
     @Instance(ExampleMod.MODID)
     public static ExampleMod instance;
-    
+
     // FML预初始化事件
     @EventHandler
     public void preInit(FMLPreInitializationEvent event) {
         System.out.println("hello 1");
     }
-    
+
     // FML初始化事件
     @EventHandler
     public void init(FMLInitializationEvent event) {
@@ -36,4 +38,5 @@ public class ExampleMod {
     public void postInit(FMLPostInitializationEvent event) {
         System.out.println("hello 3");
     }
+
 }
