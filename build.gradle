@@ -87,6 +87,12 @@ dependencies {
 	// 或者你可以用存储库的网络下载依赖...
 	
 	
+	将 你的 本地 MOD 或 本地依赖 添加放到 libs 文件夹里, 开发环境能加载当然
+	用 Gradle (7.0)高版本 改写：
+	示例：
+	//implementation fileTree(dir: 'libs', include: ['*.jar'])
+	
+	
 	// 将 artifact 、classifier （第三方依赖库） 添加放到 开发环境 里
 	// 示例：
     //compile "some.group:artifact:version:classifier"
