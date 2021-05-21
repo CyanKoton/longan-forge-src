@@ -5,6 +5,7 @@ longan-forge-1.7.10-changelog.txt:
 Build 0.1.2:
 	设置MC简体中文语言
 	ExampleMod.java 添加中文注释
+	build.gradle 改写中文注释更新
 	
 Build 0.1.1:
 	支持 Gradle 7.0
