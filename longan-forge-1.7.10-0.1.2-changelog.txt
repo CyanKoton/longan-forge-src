@@ -6,6 +6,8 @@ Build 0.1.2:
 	设置MC简体中文语言
 	ExampleMod.java 添加中文注释
 	build.gradle 改写注释更新
+	使用 LonganForgeGradle-1.2-1.1.0.3
+	使用 JVM + JDK + longan
 	
 Build 0.1.1:
 	支持 Gradle 7.0
@@ -17,9 +19,7 @@ Build 0.1.0:
 	使用 Minecraft-1.7.10
 	使用 Forge-10.13.4.1614
 	使用 LonganForgeGradle-1.2-1.1.0
-Build 0.1.1:
-	使用 LonganForgeGradle-1.2-1.1.0.3
-	使用 JVM + JDK + longan
+	
 	
 //---------------------------------------------	
 
