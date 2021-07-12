@@ -1,4 +1,4 @@
-Changelog:
+﻿Changelog:
 //longan-forge-src-changelog.txt:
 longan-forge-1.7.10-changelog.txt:
 
@@ -17,6 +17,9 @@ Build 0.1.0:
 	使用 Minecraft-1.7.10
 	使用 Forge-10.13.4.1614
 	使用 LonganForgeGradle-1.2-1.1.0
+Build 0.1.1:
+	使用 LonganForgeGradle-1.2-1.1.0.3
+	使用 JVM + JDK + longan
 	
 //---------------------------------------------	
 
