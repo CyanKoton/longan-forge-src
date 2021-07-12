@@ -29,7 +29,18 @@ buildscript {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
-    }
+	
+	maven {
+            name = "sonatype1"
+            url = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
+        }
+	
+	maven {
+            name = "sonatype2"
+            url = "https://s01.oss.sonatype.org/service/local/repositories/releases/content/"
+        }
+	
+}
 	
 	// 依赖库
     dependencies {
