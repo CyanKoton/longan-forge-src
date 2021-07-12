@@ -1,5 +1,5 @@
 
-// MOD 开发 基础 教程
+// MOD 开发 基础 教程 作者：beanflame（豆焰）电邮：beanflame@qq.com
 
 // 构建脚本
 buildscript {
@@ -7,18 +7,15 @@ buildscript {
 	//你可以看看几个国内存储库，我们国内开发环境下载速度最快还行
 	// 存储库
     repositories {
-		// 那是做叫 中央存储库， 绝大多数具备 Gradle项目 都离不开 mavenCentral（中央存储库）
-        mavenCentral()
-		// 借用 阿里云 存储库，那是国内存储库, central 仓库 和 jcenter 仓库 合并的
+    // 借用 阿里云 存储库，那是国内存储库, central 仓库 和 jcenter 仓库 合并的
 		maven {
 			name = "aliyun"
 			url "https://maven.aliyun.com/repository/public/"
 		}
-		// 龙眼 存储库，那是国内存储库，作者：beanflame（豆焰）电邮：beanflame@qq.com
-		maven {
-            name = "longan"
-            url = "https://longan.beanflame.cn/maven"
-        }
+		
+		// 那是做叫 中央存储库， 绝大多数具备 Gradle项目 都离不开 mavenCentral（中央存储库）
+        mavenCentral()
+	
 		// FORGE 存储库
         maven {
             name = "forge"
@@ -29,17 +26,7 @@ buildscript {
             name = "sonatype"
             url = "https://oss.sonatype.org/content/repositories/snapshots/"
         }
-	
-	maven {
-            name = "sonatype1"
-            url = "https://s01.oss.sonatype.org/content/repositories/snapshots/"
-        }
-	
-	maven {
-            name = "sonatype2"
-            url = "https://s01.oss.sonatype.org/service/local/repositories/releases/content/"
-        }
-	
+
 }
 	
 	// 依赖库
