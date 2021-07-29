@@ -7,7 +7,7 @@ buildscript {
 	//你可以看看几个国内存储库，我们国内开发环境下载速度最快还行
 	// 存储库
     repositories {
-    // 借用 阿里云 存储库，那是国内存储库, central 仓库 和 jcenter 仓库 合并的
+    // 借用 阿里云 存储库，那是国内存储库, central 仓库 和 jcenter 仓库 合并的 0
 		maven {
 			name = "aliyun"
 			url "https://maven.aliyun.com/repository/public/"
