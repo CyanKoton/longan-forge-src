@@ -19,7 +19,8 @@ buildscript {
 		// FORGE 存储库
         maven {
             name = "forge"
-            url = "https://files.minecraftforge.net/maven"
+            //url = "https://files.minecraftforge.net/maven"
+	    url = "https://maven.minecraftforge.net"
         }
 		// sonatype 存储库 Sonatype公司出资维护的，我们把它想象成是一个无比巨大，物产丰富的大库.....
         maven {
