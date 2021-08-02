@@ -2,6 +2,15 @@
 //longan-forge-src-changelog.txt:
 longan-forge-1.7.10-changelog.txt:
 
+Build 0.1.6:
+	使用 LonganForgeGradle-1.2-1.1.0.6
+	修复 换库频繁的bug
+	
+Build 0.1.3:
+	使用 LonganForgeGradle-1.2-1.1.0.4
+	更新 龙眼插件
+	添加 龙眼工作室仓库地址
+	
 Build 0.1.2:
 	设置MC简体中文语言
 	ExampleMod.java 添加中文注释
