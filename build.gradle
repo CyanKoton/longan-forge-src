@@ -64,11 +64,26 @@ apply plugin: 'forge'
 
 //设置镜像站
 mirrorstation {
-    mcJsonUrl = "https://bmclapi2.bangbang93.com/versions/{MC_VERSION}/{MC_VERSION}.json"
-    mcJarUrl = "https://bmclapi2.bangbang93.com/versions/{MC_VERSION}/{MC_VERSION}.jar"
-    mcServerUrl = "https://bmclapi2.bangbang93.com/versions/{MC_VERSION}/minecraft_server.{MC_VERSION}.jar"
-    assetsIndexUrl = "https://bmclapi2.bangbang93.com/indexes/{ASSET_INDEX}.json"
-    assetsUrl = "https://bmclapi2.bangbang93.com/assets"
+    //mcJsonUrl = "https://bmclapi2.bangbang93.com/versions/{MC_VERSION}/{MC_VERSION}.json"
+    //mcJarUrl = "https://bmclapi2.bangbang93.com/versions/{MC_VERSION}/{MC_VERSION}.jar"
+    //mcServerUrl = "https://bmclapi2.bangbang93.com/versions/{MC_VERSION}/minecraft_server.{MC_VERSION}.jar"
+    //assetsIndexUrl = "https://bmclapi2.bangbang93.com/indexes/{ASSET_INDEX}.json"
+    //assetsUrl = "https://bmclapi2.bangbang93.com/assets"
+    
+    
+    
+	mcJsonUrl = "https://s3.amazonaws.com/Minecraft.Download/versions/{MC_VERSION}/{MC_VERSION}.json"
+	mcJarUrl = "https://s3.amazonaws.com/Minecraft.Download/versions/{MC_VERSION}/{MC_VERSION}.jar"
+	mcServerUrl = "https://s3.amazonaws.com/Minecraft.Download/versions/{MC_VERSION}/minecraft_server.{MC_VERSION}.jar"
+	mcpUrl = "https://files.minecraftforge.net/fernflower-fix-1.0.zip"
+	assetsUrl = "https://resources.download.minecraft.net"
+	libraryUrl = "https://libraries.minecraft.net/"
+	assetsIndexUrl = "https://s3.amazonaws.com/Minecraft.Download/indexes/{ASSET_INDEX}.json"
+
+	longanMavenUrl  = "https://longan.beanflame.cn/maven"
+	aliyunMavenUrl  = "https://maven.aliyun.com/repository/public"
+	mavenMavenUrl  = "https://repo1.maven.org/maven2"
+	forgeMavenUrl = "https://maven.minecraftforge.net"
 }
 
 
