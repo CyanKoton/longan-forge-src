@@ -62,6 +62,16 @@ targetCompatibility = 1.8
 apply plugin: 'forge'
 
 
+//设置镜像站
+mirrorstation {
+    mcJsonUrl = "https://bmclapi2.bangbang93.com/versions/{MC_VERSION}/{MC_VERSION}.json"
+    mcJarUrl = "https://bmclapi2.bangbang93.com/versions/{MC_VERSION}/{MC_VERSION}.jar"
+    mcServerUrl = "https://bmclapi2.bangbang93.com/versions/{MC_VERSION}/minecraft_server.{MC_VERSION}.jar"
+    assetsIndexUrl = "https://bmclapi2.bangbang93.com/indexes/{ASSET_INDEX}.json"
+    assetsUrl = "https://bmclapi2.bangbang93.com/assets"
+}
+
+
 // MOD 版本信息 , 别忘写版本信息
 version = "1.0"
 group= "com.yourname.modid"
