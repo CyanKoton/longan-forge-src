@@ -5,11 +5,7 @@
 
 基于Gradle 7.0，LonganForgeGradle-1.2，开发的LonganForge，使用了Aliyun的Maven储存库对比原来的ForgeMaven
 
-# beanflame's LonganForgeGradle 1.2 fork for Gradle 7.0+ - example project
-
-This is an example mod using the [fork of LonganForgeGradle-1.2 made by beanflame](https://github.com/longan-studio/longan-forge-gradle).
-
-This fork supports Gradle 7.0 and later. This example project uses Gradle 7.0.
+longan-forge-gradle： [LonganForgeGradle by beanflame](https://github.com/longan-studio/longan-forge-gradle).
 
 国内访问速度大幅提升，Gradle7.0更加简单轻便，支持更多拓展
 **支持使用Kotlin,Scala等JVM语言开发Mod**
