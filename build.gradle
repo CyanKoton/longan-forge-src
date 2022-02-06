@@ -67,13 +67,13 @@ mirrorstation {
     
 	
 	// longan
-	mcJsonUrl = "https://longan-studio.github.io/maven/minecraft/versions/{MC_VERSION}/{MC_VERSION}.json"
-	mcJarUrl = "https://longan-studio.github.io/maven/minecraft/versions/{MC_VERSION}/{MC_VERSION}.jar"
-	mcServerUrl = "https://longan-studio.github.io/maven/minecraft/versions/{MC_VERSION}/minecraft_server.{MC_VERSION}.jar"
-	mcpUrl = "https://longan-studio.github.io/maven/minecraft/mcp/fernflower-fix-1.0.zip"
+	mcJsonUrl = "https://cyankoton.github.io/maven/minecraft/versions/{MC_VERSION}/{MC_VERSION}.json"
+	mcJarUrl = "https://cyankoton.github.io/maven/minecraft/versions/{MC_VERSION}/{MC_VERSION}.jar"
+	mcServerUrl = "https://cyankoton.github.io/maven/minecraft/versions/{MC_VERSION}/minecraft_server.{MC_VERSION}.jar"
+	mcpUrl = "https://cyankoton.github.io/maven/minecraft/mcp/fernflower-fix-1.0.zip"
 	//assetsUrl = "https://resources.download.minecraft.net"
 	//libraryUrl = "https://libraries.minecraft.net/"
-	assetsIndexUrl = "https://longan-studio.github.io/maven/minecraft/indexes/{ASSET_INDEX}.json"
+	assetsIndexUrl = "https://cyankoton.github.io/maven/minecraft/indexes/{ASSET_INDEX}.json"
 	
 	// ------------------------------------------------------------------------------------------------------------------
 	
@@ -85,7 +85,7 @@ mirrorstation {
 	// libraryUrl = "https://libraries.minecraft.net/"
 	// assetsIndexUrl = "https://s3.amazonaws.com/Minecraft.Download/indexes/{ASSET_INDEX}.json"
 
-	longanMavenUrl  = "https://longan.beanflame.cn/maven"
+	longanMavenUrl  = "https://cyankoton.github.io/maven"
 	aliyunMavenUrl  = "https://maven.aliyun.com/repository/public"
 	mavenMavenUrl  = "https://repo1.maven.org/maven2"
 	forgeMavenUrl = "https://maven.minecraftforge.net"
